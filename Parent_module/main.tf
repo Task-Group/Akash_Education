@@ -3,7 +3,8 @@ module "rg_name" {
   resource_group_name = "todorg"
   location            = "central india"
 }
-#    i am  testing policy 
+#    i am  testing policy
+# we want to  check the policy for  allowed locations and  not allowed locations
 module "vnet_name" {
   depends_on          = [module.rg_name]
   source              = "../Child_module/azurerm_vnet"
