@@ -3,7 +3,7 @@ module "rg_name" {
   resource_group_name = "todorg"
   location            = "central india"
 }
-
+#    i am  testing policy 
 module "vnet_name" {
   depends_on          = [module.rg_name]
   source              = "../Child_module/azurerm_vnet"
