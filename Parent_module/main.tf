@@ -6,6 +6,14 @@ module "rg_name" {
 #    i am  testing policy
 # we want to  check the policy for  allowed locations and  not allowed locations
 #  allowed locations are central india and south india
+
+module "rg_name1" {
+  source              = "../Child_module/azurerm_rg"
+  resource_group_name = "todorg1"
+  location            = "central india"
+}
+
+
 module "vnet_name" {
   depends_on          = [module.rg_name]
   source              = "../Child_module/azurerm_vnet"
